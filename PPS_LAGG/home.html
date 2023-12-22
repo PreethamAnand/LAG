@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Play</title>
+    <style>
+        :root {
+            --bg-color: #083352;
+            --second-bg-color: #112e42;
+            --text-color: #ededed;
+            --main-color: #00abf0;
+        }
+
+        #fot {
+            color: aqua;
+            font-weight: initial;
+            font-style: italic;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        #par {
+            color: blueviolet;
+            font-weight: bold;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        #link {
+            text-align: center;
+            /* background-color: lightpink; */
+            border-radius: 9px 9px 9px 9px;
+            border: none;
+            font-weight: bold;
+            font-size: 20px;
+            color: white;
+        }
+
+        #fir {
+            text-align: center;
+            background-color: orange;
+            border-radius: 20% 20% 20% 20%;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: url(IMG/h1bg.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .wrapper {
+            width: 620px
+                /* Change the width of the box*/
+            ;
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, .2);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+            color: #fff;
+            border-radius: 10px;
+            padding: 30px 40px;
+        }
+
+        .wrapper h1 {
+            font-size: 36px;
+            text-align: center;
+        }
+
+        .btn-box {
+            margin-bottom: -70px;
+            margin-left: 700px;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            width: 20.5rem;
+            height: 3rem;
+        }
+
+        .btn-box .btn {
+            position: relative;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 7rem;
+            height: 100%;
+            background: var(--main-color);
+            border: .2rem solid var(--main-color);
+            border-radius: .8rem;
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: .1rem;
+            color: var(--bg-color);
+            z-index: 1;
+            overflow: hidden;
+            transition: .5s;
+        }
+
+        .btn-box .btn:hover {
+            color: var(--main-color);
+        }
+
+        .btn-box .btn:nth-child(2) {
+            background: transparent;
+            color: var(--main-color);
+        }
+
+        .btn-box .btn:nth-child(2):hover {
+            color: var(--bg-color);
+        }
+
+        .btn-box .btn:nth-child(2)::before {
+            background: var(--main-color);
+        }
+
+        .btn-box .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: var(--bg-color);
+            /* background: lightpink; */
+            z-index: -5;
+            transition: .5s;
+        }
+
+        .btn-box .btn:hover::before {
+            width: 100%;
+        }
+
+        .text-animate {
+            /*Need to size increaase */
+            position: relative;
+            width: 33.8rem;
+        }
+
+        .text-animate h3 {
+            font-size: 3.2rem;
+            font-weight: 700;
+            color: black;
+            /* -webkit-text-stroke: .7px black; */
+        }
+
+        .btm {
+            text-align: center;
+            font-size: 10px;
+            font-weight: 700;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="body">
+
+        <div class="text-animate">
+            <h3><i><b>Welcome to <br>Game Play</b></i></h3>
+        </div>
+        <p>
+        <div id="link">
+            <p>"Enjoy games that bring joy to your day.
+                <br>Have fun, play smart, and make every moment a win!"
+            </p>
+        </div>
+        </p>
+        <div class="btn-box">
+            <a href="home2.html" class="btn">Start</a>
+        </div>
+    </div>
+</body>
+
+</html>
